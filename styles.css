@@ -1,0 +1,89 @@
+/* ---------- Base Styles ---------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  color: #333;
+  text-align: center;
+  padding: 0 10px;
+}
+
+header, footer {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.card {
+  background: #fff;
+  margin: 25px auto;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ---------- Part 1: Transitions & Keyframes ---------- */
+.fancy-btn {
+  background: #3498db;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.4s ease, transform 0.4s ease;
+}
+.fancy-btn:hover {
+  background: #2980b9;
+  transform: scale(1.1) rotate(3deg);
+}
+
+/* Continuous pulsing animation */
+.pulse-box {
+  width: 100px;
+  height: 100px;
+  background: #e74c3c;
+  margin: 20px auto;
+  border-radius: 12px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%   { transform: scale(1);   opacity: 1; }
+  50%  { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+/* ---------- Part 3: JS + CSS Combined ---------- */
+#animatedBox {
+  width: 120px;
+  height: 120px;
+  background: #2ecc71;
+  margin: 30px auto;
+  border-radius: 16px;
+  transition: transform 0.8s ease, background 0.8s ease;
+}
+
+.animate-move {
+  transform: translateY(150px) rotate(45deg) scale(1.2);
+  background: #9b59b6;
+}
+
+.action-btn {
+  background: #f39c12;
+  color: #fff;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.action-btn:hover {
+  background: #e67e22;
+}
